@@ -3,6 +3,20 @@ import argparse
 import matplotlib.pyplot as plt
 
 
+### -------------
+# Run this code using
+# python LogReg.py train.tsv val.tsv test.tsv train_out_labels.txt test_out_labels.txt metrics.txt 500 0.1
+# 1. Path to train input 
+# 2. Path to val input
+# 3. Path to test input
+# 4. Path to output file where prediction on training data is written
+# 5. Path to output file where prediction on test data is written
+# 6. Path to output file where metrics (train and test error) are written
+# 7. Number of epochs (times SGD loops through all the training data)
+# 8. Learning rate
+### -------------
+
+
 def sigmoid(x : np.ndarray):
     """
     Implementation of the sigmoid function.
@@ -60,7 +74,6 @@ def train(
         nll = -np.mean(y * np.log(probs) + (1 - y) * np.log(1 - probs))
 
         losses.append(nll)
-
 
     # print(" -- finished training -- ")
     return X_aug, theta_aug, losses
