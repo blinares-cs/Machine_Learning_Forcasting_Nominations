@@ -17,9 +17,9 @@ warnings.filterwarnings("ignore")
 
 
 
-DATA_PATH     = "ML_dataset.csv"   # ← point this at your file
+DATA_PATH     = "ML_dataset.csv"  
 TARGET_RT     = "tomatometer_rating"
-TARGET_PROFIT = "profit"              # derived below
+TARGET_PROFIT = "profit"             
 
 
 def parse_list_column(series):
